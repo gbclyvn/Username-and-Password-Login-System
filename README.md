@@ -1,11 +1,11 @@
 # cpp-login-system
 
-A lightweight C++ console application that provides a secure, loop-based username and password verification system.
+A secure, console-based user authentication application that uses a continuous validation loop to restrict access until matching credentials are input.
 
 ## Features
-- **Strict Verification**: Evaluates credentials using explicit logical comparison operators.
-- **Infinite Loop Protection**: Implements a persistent `while(true)` validation mechanism that breaks only upon successful authentication.
-- **Clean Namespace Management**: Avoids global namespace pollution by using explicit `std::` prefixes.
+- **Persistent Access Control**: Implements a continuous validation loop that traps unauthorized login attempts until the correct information is provided.
+- **Strict Conditional Logic**: Compares user input directly against specific, hardcoded credential strings using standard boolean operations.
+- **Immediate Terminal Feedback**: Notifies users explicitly with customized state readouts when authentication succeeds or fails.
 
 ## Requirements
 - A modern C++ compiler (e.g., GCC/MinGW, Clang, MSVC).
@@ -28,8 +28,8 @@ Run the compiled executable:
 
 ## Example Usage
 ```text
-Enter Username: wrong_user
-Enter Password: 0000
+Enter Username: admin
+Enter Password: password
 Invalid username or password.
 
 Enter Username: gb.clyvn
