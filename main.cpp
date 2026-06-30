@@ -1,29 +1,26 @@
-﻿#include <iostream>
-#include <iomanip> 
-using namespace std;
+#include <iostream>
+#include <string>
 
 int main() {
-    string studentsID;
-    float lab1, lab2, lab3, average;
+    std::string cusername = "gb.clyvn";
+    std::string cpass = "1234";
 
-    cout << "Enter Students ID: ";
-    cin >> studentsID;
+    std::string username, password;
 
-    cout << "Enter Lab 1 Score: ";
-    cin >> lab1;
+    while (true) {
+        std::cout << "Enter Username: ";
+        std::cin >> username;
 
-    cout << "Enter Lab 2 score: ";
-    cin >> lab2;
+        std::cout << "Enter Password: ";
+        std::cin >> password;
 
-    cout << "Enter Lab 3 score: ";
-    cin >> lab3;
-
-    average = (lab1 + lab2 + lab3) / 3;
-
-    cout << endl;
-    cout<< "StudentsID:   " << studentsID << endl;
-    cout << "Average Score: " << fixed <<
-    setprecision(4) << average << endl;
+        if (username == cusername && password == cpass) {
+            std::cout << "Login successful.\n";
+            break;
+        } else {
+            std::cout << "Invalid username or password.\n";
+        }
+    }
 
     return 0;
 }
